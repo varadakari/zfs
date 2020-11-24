@@ -104,11 +104,11 @@
 
 # By default python-pyzfs is enabled, with the exception of
 # RHEL 6 which by default uses Python 2.6 which is too old.
-%if 0%{?rhel} == 6
-%bcond_with    pyzfs
-%else
+#%if 0%{?rhel} == 6
+#%bcond_with    pyzfs
+#%else
 %bcond_without pyzfs
-%endif
+#%endif
 
 Name:           @PACKAGE@
 Version:        @VERSION@
